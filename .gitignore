@@ -17,11 +17,14 @@ dist-ssr
 # Local configuration files
 *.local
 
+# Miscellaneous
+.DS_Store
+.env
+
 # Editor directories and files
 .vscode/*
-!.vscode/extensions.json  # Ensures extension recommendations are shared
+!.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj

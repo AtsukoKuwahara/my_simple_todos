@@ -78,8 +78,9 @@ Once the application is running, you can access it through your browser at http:
 - `src/providers`: React context providers for global state management.
 - `src/utils`: Utilities and helper functions, including database setup.
 
+## Credits
 
-Feel free to adjust the content according to what fits best for your project's needs!
+This project was initially based on a project from a Udemy course, which was then customized and extended with additional features and improvements.
 
 ## License
 
