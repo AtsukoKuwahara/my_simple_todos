@@ -82,8 +82,8 @@ export function useTodoList(currentList) {
     );
   };
 
-  // Check if all items are checked
-  const allChecked = data?.items.every((item) => item.checked);
+  // Check if all items are checked and there are items in the list
+const allChecked = data?.items.length > 0 && data.items.every((item) => item.checked);
 
-  return { data, newItem, deleteItem, toggleChecked, updateItem, allChecked };
+return { data, newItem, deleteItem, toggleChecked, updateItem, allChecked };
 }

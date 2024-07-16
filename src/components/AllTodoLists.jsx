@@ -24,6 +24,7 @@ import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import { useState, useEffect } from "react";
 import { useTodoLists } from "../hooks/useTodoLists.js";
 import { useAppState } from "../providers/AppState.jsx";
+import "./styles.css";
 
 // AllTodoLists component to display and manage all todo lists.
 export function AllTodoLists() {
@@ -75,11 +76,11 @@ export function AllTodoLists() {
   return (
     <Drawer
       sx={{
-        width: 0.25,
+        width: 0.35,
         minWidth: 200,
         flexShrink: 0,
         "& .MuiDrawer-paper": {
-          width: 0.25,
+          width: 0.35,
           minWidth: 200,
           boxSizing: "border-box",
         },
@@ -98,7 +99,10 @@ export function AllTodoLists() {
                 selected={currentList === id}
               >
                 <Icon />
-                <ListItemText sx={{ ml: 0.5 }} primary={name} />
+                <ListItemText 
+                  sx={{ ml: 0.5 }} 
+                  primary={<span className="overflow-ellipsis">{name}</span>}
+                />
                 <Box
                   sx={{
                     display: "flex",

@@ -20,7 +20,7 @@ import { useEffect, useState } from "react";
 import { useTodoList } from "../hooks/useTodoList.js";
 import { useTodoLists } from "../hooks/useTodoLists.js";
 import { useAppState } from "../providers/AppState.jsx";
-import "./styles.css"; // Ensure this imports the CSS with the congrats animation
+import "./styles.css";
 
 // CurrentTodoList component to display and manage the items of the selected todo list.
 export function CurrentTodoList() {
@@ -85,6 +85,7 @@ export function CurrentTodoList() {
                 )}
               </Box>
               <TextField
+                className="wide-text-field"
                 value={originalListName}
                 onChange={(e) => setOriginalListName(e.target.value)}
                 onBlur={(e) => updateList(data.id, e.target.value)}
@@ -132,6 +133,7 @@ export function CurrentTodoList() {
                     </ListItemIcon>
                     <ListItemText id={`checkbox-list-label-${id}`}>
                       <TextField
+                        className="long-text-field"
                         onClick={(e) => e.stopPropagation()}
                         onChange={(e) =>
                           setOriginalListItems({
